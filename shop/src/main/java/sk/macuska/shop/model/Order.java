@@ -16,12 +16,9 @@ public class Order {
 
     private double totalPrice;
 
-
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date orderDate;
-
-
 
     //MAPOVANIE - VZTAHY MEDZI ENTITAMI V DATABAZE  ONETOONE, ONETOMANY, MANYTOMANY
     @OneToOne(cascade = CascadeType.MERGE)
@@ -43,6 +40,7 @@ public class Order {
         this.customer = customer;
         this.shoppingItems = shoppingItems;
     }
+
 
     public int getId() {
         return id;

@@ -41,21 +41,21 @@
 
 
     <table border="1" class = "table table-striped table-responsive-md">
-        <thead>          <!--//HLAVICKA-->
-        <tr>        <!--RIADOK V HLAVICKE-->
+        <thead>
+        <tr>
             <th>Image</th>
             <th>
                 <a th:href="@{'/shop/' + ${currentPage} + '?sortField=name&sortDir=' + ${reverseSortDir}}">
                     Name</a>
-            </th>   <!--BUNKA V HLAVICKE-->
+            </th>
             <th>
                 <a th:href="@{'/shop/' + ${currentPage} + '?sortField=brand&sortDir=' + ${reverseSortDir}}">
                     Brand</a>
-            </th>    <!--BUNKA V HLAVICKE-->
+            </th>
             <th>
                 <a th:href="@{'/shop/' + ${currentPage} + '?sortField=genderCategory&sortDir=' + ${reverseSortDir}}">
                     Category</a>
-            </th>        <!--BUNKA V HLAVICKE-->
+            </th>
             <th>Color</th>
             <th>Material</th>
             <th>Size</th>
