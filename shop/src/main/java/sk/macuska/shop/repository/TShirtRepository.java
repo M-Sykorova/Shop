@@ -6,4 +6,5 @@ import sk.macuska.shop.model.TShirt;
 
 @Repository
 public interface TShirtRepository extends JpaRepository<TShirt, Integer> {
+
 }

@@ -7,7 +7,38 @@
 </head>
 <body>
 <div class="container my-2">
-    <h1>Macuska Shop</h1>
+
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" th:href="@{/shop}">Macuska Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" th:href="@{/aboutUs}">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/shop}">E-shop</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/registration}">Registration</a>
+                    </li>
+                </ul>
+                <form action="#" th:action="@{/search}" th:method="POST" class="d-flex" role="search">
+                    <input th:type="text" th:name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
 
     <table border="1" class = "table table-striped table-responsive-md">
         <thead>          <!--//HLAVICKA-->
@@ -50,6 +81,11 @@
             <td th:text="${tShirt.stockQuantity}"></td>
             <td th:text="${tShirt.price} + €"></td>
             <td>
+                <form>
+                    <input type="number" th:name="quantity" class="form-control mb-4 col-2">
+
+                    <button type="button" disabled class="btn btn-danger col-6">Add to Cart</button>
+                </form>
             </td>
         </tr>
         </tbody>
